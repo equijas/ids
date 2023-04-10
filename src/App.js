@@ -3,6 +3,7 @@ import './App.css';
 import Alert from './components/Alert';
 import AlertDisplay from './components/AlertDisplay';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ExportButton from './ExportButton';
 
 import {
   BrowserRouter as Router,
