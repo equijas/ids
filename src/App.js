@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Alert from './Alert.js';
-import AlertDisplay from './AlertDisplay';
+import Alert from './components/Alert';
+import AlertDisplay from './components/AlertDisplay';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
