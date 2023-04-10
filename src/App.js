@@ -4,6 +4,7 @@ import Alert from './components/Alert';
 import AlertDisplay from './components/AlertDisplay';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ExportButton from './ExportButton';
+import IngestConfig from './IngestConfig';
 
 import {
   BrowserRouter as Router,
@@ -45,7 +46,7 @@ class App extends Component {
               </h2>
               <div><ExportButton/></div>
               <div>Total # Alerts (By Type?)</div>
-              <div>Ingest Config</div>
+              <div><IngestConfig/></div>
               <div>?</div>
             </div>
           </div>
