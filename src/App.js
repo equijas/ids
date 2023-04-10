@@ -42,7 +42,7 @@ class App extends Component {
               <h2>
                 Dashboard Section
               </h2>
-              <div>EXPORT BUTTON</div>
+              <div><ExportButton/></div>
               <div>Total # Alerts (By Type?)</div>
               <div>Ingest Config</div>
               <div>?</div>
