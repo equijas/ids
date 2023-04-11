@@ -1,11 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Alert from './components/Alert';
-import AlertDisplay from './components/AlertDisplay';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ExportButton from './dashboard/ExportButton.js';
-import AlertStats from './dashboard/AlertStats.js'
-import IngestConfig from './dashboard/IngestConfig';
 
 
 import {
@@ -15,51 +11,22 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Component, useState } from 'react';
+import LandingPage from "./components/LandingPage";
 
 class App extends Component {
   render() {
     return (
-      <body>
-        <nav class="navbar navbar-expand-lg navbar-dark nav-bg fixed-top">
-          <div class="container-fluid">
-            <h5 class="text-white text-center col">Lightweight Intrusion Detection System</h5>
+        <Router>
+          <body>
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<LandingPage />}/>
+              <Route path="/other" element={<Alert />}></Route>
+            </Routes>
           </div>
-        </nav>
-        <br/>
-        <br/>
-        <div className="main">
-          <p>This is the landing page for the analyst.</p>
-          <p>From here, analysts will see various data points, including config files, current traffic, and alerts.</p>
-          
+          </body>
+        </Router>
 
-          <div class="row">
-            <div class="column">
-              <p>Alert Test</p>
-              <p>This is an experimental 'pop-up' version of the alerts</p>
-              <br/>
-              <Alert />
-            </div>
-            <div  class="divider">
-
-            </div>
-            <div class="column">
-              <h2>
-                Dashboard Section
-              </h2>
-              <div><ExportButton/></div>
-              <div><AlertStats/></div>
-              <div><IngestConfig/></div>
-              <div>?</div>
-            </div>
-          </div>
-          <br/>
-          <br/>
-         
-          <NetworkHistorial />
-          {/* <br/> */}
-          
-        </div>
-      </body>
     );
   }
 }

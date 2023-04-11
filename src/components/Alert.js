@@ -30,6 +30,7 @@ class Alert extends Component {
     }
 
     displayAlert() {
+        console.log("alert displaying")
         this.setState(prevState => ({
             alertVisible: !prevState.alertVisible,
             buttonText: prevState.alertVisible ? 'Test Alert' : 'Hide Alert'
